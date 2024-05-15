@@ -3,9 +3,10 @@ import {Loader} from "../Loader";
 import {PostListView} from "./PostListView.tsx";
 import {useQuery} from "@tanstack/react-query";
 import {queryClient} from "../../api/queryClient.ts";
+import {FC} from "react";
 
 
-export const FetchPostListView = () => {
+export const FetchPostListView:FC = () => {
     const postListQuery = useQuery({queryKey: ['posts'], queryFn: fetchPostList}, queryClient)
 
     switch (postListQuery.status) {

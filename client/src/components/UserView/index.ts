@@ -1,3 +1,3 @@
 export * from './UserView';
 
-export * from './FetchUserView';
+export * from './FetchUserView.tsx';

@@ -1,5 +1,4 @@
 import {FC} from 'react';
-
 import {PostView} from '../PostView';
 import './PostListView.css';
 import {PostList} from "../../api/Post.ts";
