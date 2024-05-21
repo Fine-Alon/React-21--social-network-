@@ -14,12 +14,12 @@ export const AuthForm: FC = () => {
     <div className="auth-form">
       <SegmentedSwitch>
         <SegmentedSwitchOption
-          title="Войти"
+          title="Login"
           isActive={authType === 'login'}
           onClick={() => setAuthType('login')}
         />
         <SegmentedSwitchOption
-          title="Зарегистрироваться"
+          title="Registration"
           isActive={authType === 'registration'}
           onClick={() => setAuthType('registration')}
         />

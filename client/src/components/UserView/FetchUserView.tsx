@@ -19,8 +19,6 @@ export const FetchUserView: FC<FetchUserViewProps> = ({userId}) => {
         case 'pending':
             return <Loader/>
         case 'success':
-            console.log(info.data)
-
             return <UserView user={info.data}/>
         case 'error':
             return <div>

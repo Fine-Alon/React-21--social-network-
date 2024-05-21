@@ -12,7 +12,12 @@ export const LoginForm: FC = () => {
     const [password, setPassword] = useState('');
 
     const mutationLogin = useMutation(
-        {mutationFn: () => loginUser(username, password)}, queryClient)
+        {
+            mutationFn: () => loginUser(username, password),
+            onSuccess() {
+                queryClient.invalidateQueries({queryKey: ['users', 'me']})
+            }
+        }, queryClient)
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
